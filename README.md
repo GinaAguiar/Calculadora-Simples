@@ -5,7 +5,7 @@ Uma calculadora moderna desenvolvida com **HTML, CSS e JavaScript**, com interfa
 ## 🔗 Acesse o projeto
 
 **GitHub Pages:**
-https://ginaaguiar.github.io/calculadora-simples/
+[https://ginaaguiar.github.io/calculadora-simples/](https://ginaaguiar.github.io/Calculadora-Simples/)
 
 ## 📸 Preview
 
