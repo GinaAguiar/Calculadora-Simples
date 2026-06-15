@@ -13,33 +13,32 @@
 
         <div class="buttons">
             <!-- Primeira linha -->
-            <button class="delete" onclick="deleteLast()">⌫</button>
             <button class="clear" onclick="clearDisplay()">AC</button>
-            <button class="operator" onclick="oppendToDisplay('%')">%</button>
-            <button class="operator" onclick="oppendToDisplay('/')">÷</button>
-            <button class="operator" onclick="oppendToDisplay('*')">×</button>
+            <button class="delete" onclick="deleteLast()">⌫</button>
+            <button class="operator" onclick="calculatePercentage()">%</button>
+            <button class="operator" onclick="appendToDisplay('/')">÷</button>
 
             <!-- Segunda linha -->
-            <button onclick="oppendToDisplay('7')">7</button>
-            <button onclick="oppendToDisplay('7')"onclick="oppendToDisplay('8')">8</button>
-            <button onclick="oppendToDisplay('9')">9</button>
-            <button class="operator" onclick="oppendToDisplay('*')">×</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="operator" onclick="appendToDisplay('*')">×</button>
 
             <!-- Terceira linha -->
-            <button onclick="oppendToDisplay('4')">4</button>
-            <button onclick="oppendToDisplay('5')">5</button>
-            <button onclick="oppendToDisplay('6')">6</button>
-            <button class="operator" onclick="oppendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="operator" onclick="appendToDisplay('-')">-</button>
 
             <!-- Quarta linha -->
-            <button onclick="oppendToDisplay('1')">1</button>
-            <button onclick="oppendToDisplay('2')">2</button>
-            <button onclick="oppendToDisplay('3')">3</button>
-            <button class="operator" onclick="oppendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button class="operator" onclick="appendToDisplay('+')">+</button>
             
             <!-- Quinta linha -->
-            <button class="double" onclick="oppendToDisplay('0')">0</button>
-            <button onclick="oppendToDisplay(',')">,</button>
+            <button class="double" onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay(',')">,</button>
             <button class="equal" onclick="calculate()">=</button>
         </div>
     </div>
