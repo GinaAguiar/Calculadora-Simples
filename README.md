@@ -11,7 +11,7 @@ https://ginaaguiar.github.io/calculadora-simples/
 
 ### 💻 Versão Desktop
 
-![Calculadora Desktop](imagens-calculadora-simples/captura-de-tela-calculadora-simples.png)
+![Calculadora Desktop](imagens-calculadora-simples/captura-de-tela-calculadora-simples.jpg)
 
 ### 📱 Versão Mobile
 
