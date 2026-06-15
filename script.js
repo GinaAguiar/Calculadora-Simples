@@ -41,8 +41,8 @@ function calculate() {
     } catch (error) {
         display.value = "Erro";
     }
-    }
-    
+}
+
 function deleteLast() {
     display.value = display.value.slice(0, -1);
 }
