@@ -77,8 +77,9 @@ calculadora-simples/
 ├── script.js
 │
 └── imagens-calculadora-simples/
-    ├── imagem-capa-calculadora.png
-    └── captura-tela-projeto.png
+    ├── captura-de-tela-calculadora-simples-mobile.png
+    ├── captura-de-tela-calculadora-simples.jpg
+    └── imagem-capa-calculadora.png
 ```
 
 ## 🚀 Aprendizados
