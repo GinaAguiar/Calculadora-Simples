@@ -1,6 +1,29 @@
 const display = document.getElementById('display');
+
+function getCurrentNumber() {
+    const parts = display.value.split(/[+\-*/]/);
+    return parts[parts.length - 1];
+}
+
+function formatResult(value) {
+    return String(value).replaceAll('.', ',');
+}
+
+function normalizeExpression(expression) {
+    const normalizedExpression = expression.replaceAll(',', '.');
+
+    if (!/^[0-9+\-*/. ]+$/.test(normalizedExpression)) {
+        throw new Error('Expressao invalida');
+    }
+
+    return normalizedExpression;
+}
+
 function appendToDisplay(input) {
     if (display.value === "Erro") display.value = "";
+
+    if (input === ',' && getCurrentNumber().includes(',')) return;
+
     display.value += input;
 }
 
@@ -9,21 +32,21 @@ function clearDisplay() {
 }
 
 function calculatePercentage() {
-    const expression = display.value.replace(',', '.');
-    const operation = expression.match(/^(.*)([+\-*/])(\d+(?:\.\d+)?)$/);
-
     try {
+        const expression = normalizeExpression(display.value);
+        const operation = expression.match(/^(.*)([+\-*/])(\d+(?:\.\d+)?)$/);
+
         if (operation) {
             const [, baseExpression, operator, percentageValue] = operation;
-            const baseValue = eval(baseExpression);
+            const baseValue = Function(`"use strict"; return (${baseExpression})`)();
             const value = Number(percentageValue);
             const percentage = ['+', '-'].includes(operator)
                 ? baseValue * value / 100
                 : value / 100;
 
-            display.value = `${baseExpression}${operator}${percentage}`;
+            display.value = formatResult(`${baseExpression}${operator}${percentage}`);
         } else if (expression !== '' && isFinite(expression)) {
-            display.value = Number(expression) / 100;
+            display.value = formatResult(Number(expression) / 100);
         }
     } catch (error) {
         display.value = "Erro";
@@ -32,11 +55,12 @@ function calculatePercentage() {
 
 function calculate() {
     try {
-        const result = eval(display.value);
+        const expression = normalizeExpression(display.value);
+        const result = Function(`"use strict"; return (${expression})`)();
         if (!isFinite(result)) {
             display.value = "Erro";
         } else {
-            display.value = result;
+            display.value = formatResult(result);
         }
     } catch (error) {
         display.value = "Erro";
@@ -52,6 +76,7 @@ document.addEventListener('keydown' , (event) => {
     const key = event.key;
     if (/[0-9]/.test(key)) appendToDisplay(key);
     if (['+', '-', '*', '/'].includes(key)) appendToDisplay(key);
+    if (key === ',' || key === '.') appendToDisplay(',');
     if (key === 'Enter' || key === '=') calculate();
     if (key === 'Escape') clearDisplay();
     if (key === 'Backspace') display.value = display.value.slice(0, -1);
