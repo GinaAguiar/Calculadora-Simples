@@ -1,146 +1,146 @@
 body {
-    display: flex; <!--Ativa Flexbox para organizar os elementos dentro do corpo da página-->
-    justify-content: center; <!--Centraliza os elementos horizontalmente-->
-    align-items: center; <!--Centraliza os elementos verticalmente-->
-    min-height: 100vh; <!--Garante que o corpo ocupe pelo menos a altura total da janela de visualização-->
-    min-height: 100dvh; <!--Usa a unidade dinâmica de altura da viewport para garantir que o layout se ajuste corretamente em dispositivos móveis, especialmente com barras de navegação que podem aparecer ou desaparecer-->
-    margin: 0; <!--Remove a margem padrão do navegador para o corpo da página-->
-    padding: <!--padding + safe-area adiciona preenchimento ao redor do conteúdo para evitar que ele fique muito próximo das bordas da tela, especialmente em dispositivos com áreas seguras (safe areas) como iPhones com notch. O uso de env() garante que o preenchimento se ajuste dinamicamente às áreas seguras do dispositivo.-->
-        max(16px, env(safe-area-inset-top)) <!--Garante um preenchimento mínimo de 16px ou o valor do recorte superior seguro do dispositivo, o que for maior-->
+    display: flex; /*Ativa Flexbox para organizar os elementos dentro do corpo da página*/
+    justify-content: center; /*Centraliza os elementos horizontalmente*/
+    align-items: center; /*Centraliza os elementos verticalmente*/
+    min-height: 100vh; /*Garante que o corpo ocupe pelo menos a altura total da janela de visualização*/
+    min-height: 100dvh; /*Usa a unidade dinâmica de altura da viewport para garantir que o layout se ajuste corretamente em dispositivos móveis, especialmente com barras de navegação que podem aparecer ou desaparecer*/
+    margin: 0; /*Remove a margem padrão do navegador para o corpo da página*/
+    padding: /*padding + safe-area adiciona preenchimento ao redor do conteúdo para evitar que ele fique muito próximo das bordas da tela, especialmente em dispositivos com áreas seguras (safe areas) como iPhones com notch. O uso de env() garante que o preenchimento se ajuste dinamicamente às áreas seguras do dispositivo.*/
+        max(16px, env(safe-area-inset-top)) /*Garante um preenchimento mínimo de 16px ou o valor do recorte superior seguro do dispositivo, o que for maior*/
         max(16px, env(safe-area-inset-right)) 
         max(16px, env(safe-area-inset-bottom))
         max(16px, env(safe-area-inset-left));
-    box-sizing: border-box; <!--Define o modelo de caixa para incluir padding e border no tamanho total do elemento, evitando que o conteúdo transborde-->
-    background-image: url("imagens-calculadora-simples/imagem-capa-calculadora.png"); <!--Define a imagem de fundo da página, que será exibida atrás do conteúdo-->
-    background-position: center; <!--Centraliza a imagem de fundo na tela-->
-    background-size: cover; <!--Faz com que a imagem de fundo cubra toda a área do corpo da página, ajustando-se proporcionalmente-->
-    background-repeat: no-repeat; <!--Evita que a imagem de fundo se repita, garantindo que apenas uma instância da imagem seja exibida-->
-    background-attachment: fixed; <!--Mantém a imagem de fundo fixa enquanto o usuário rola a página, criando um efeito de paralaxe-->
-    font-family: 'Segoe UI', sans-serif; <!--Define a fonte padrão para o texto na página, usando 'Segoe UI' se disponível, ou uma fonte sans-serif genérica como fallback-->
+    box-sizing: border-box; /*Define o modelo de caixa para incluir padding e border no tamanho total do elemento, evitando que o conteúdo transborde*/
+    background-image: url("imagens-calculadora-simples/imagem-capa-calculadora.png"); /*Define a imagem de fundo da página, que será exibida atrás do conteúdo*/
+    background-position: center; /*Centraliza a imagem de fundo na tela*/
+    background-size: cover; /*Faz com que a imagem de fundo cubra toda a área do corpo da página, ajustando-se proporcionalmente*/
+    background-repeat: no-repeat; /*Evita que a imagem de fundo se repita, garantindo que apenas uma instância da imagem seja exibida*/
+    background-attachment: fixed; /*Mantém a imagem de fundo fixa enquanto o usuário rola a página, criando um efeito de paralaxe*/
+    font-family: 'Segoe UI', sans-serif; /*Define a fonte padrão para o texto na página, usando 'Segoe UI' se disponível, ou uma fonte sans-serif genérica como fallback*/
 }
 
-.calculator { <!--Define a classe "calculator" que estiliza o contêiner principal da calculadora-->
-    display: flex; <!--Ativa Flexbox para organizar os elementos dentro do contêiner da calculadora-->
-    flex-direction: column; <!--Organiza os elementos filhos em uma coluna, empilhando-os verticalmente-->
-    align-items: center; <!--Centraliza os elementos filhos horizontalmente dentro do contêiner-->
-    background: rgba(255, 255, 255, 0.85); <!--Define a cor de fundo da calculadora com um branco semi-transparente, permitindo que o fundo da página seja parcialmente visível-->
-    backdrop-filter: blur(10px); <!--Aplica um efeito de desfoque ao fundo da calculadora, criando uma aparência de vidro fosco-->
-    -webkit-backdrop-filter: blur(10px); <!--Garante compatibilidade com navegadores baseados em WebKit, como Safari, aplicando o mesmo efeito de desfoque-->
-    padding: 20px; <!--Adiciona preenchimento interno de 20px ao redor do conteúdo da calculadora, criando espaço entre o conteúdo e as bordas do contêiner-->
-    border-radius: 25px; <!--Arredonda os cantos do contêiner da calculadora com um raio de 25px, criando uma aparência mais suave e amigável-->
-    box-shadow: <!--Adiciona sombras ao redor do contêiner da calculadora para criar profundidade e destaque visual-->
+.calculator { /*Define a classe "calculator" que estiliza o contêiner principal da calculadora*/
+    display: flex; /*Ativa Flexbox para organizar os elementos dentro do contêiner da calculadora*/
+    flex-direction: column; /*Organiza os elementos filhos em uma coluna, empilhando-os verticalmente*/
+    align-items: center; /*Centraliza os elementos filhos horizontalmente dentro do contêiner*/
+    background: rgba(255, 255, 255, 0.85); /*Define a cor de fundo da calculadora com um branco semi-transparente, permitindo que o fundo da página seja parcialmente visível*/
+    backdrop-filter: blur(10px); /*Aplica um efeito de desfoque ao fundo da calculadora, criando uma aparência de vidro fosco*/
+    -webkit-backdrop-filter: blur(10px); /*Garante compatibilidade com navegadores baseados em WebKit, como Safari, aplicando o mesmo efeito de desfoque*/
+    padding: 20px; /*Adiciona preenchimento interno de 20px ao redor do conteúdo da calculadora, criando espaço entre o conteúdo e as bordas do contêiner*/
+    border-radius: 25px; /*Arredonda os cantos do contêiner da calculadora com um raio de 25px, criando uma aparência mais suave e amigável*/
+    box-shadow: /*Adiciona sombras ao redor do contêiner da calculadora para criar profundidade e destaque visual*/
         0 15px 35px rgba(0, 0, 0, 0.18),
         0 0 40px rgba(242, 139, 198, 0.18);
-    width: min(490px, 100%); <!--Define a largura da calculadora como o menor valor entre 490px e 100% da largura disponível, garantindo que ela se ajuste a diferentes tamanhos de tela-->
-    box-sizing: border-box; <!--Define o modelo de caixa para incluir padding e border no tamanho total do elemento, evitando que o conteúdo transborde-->
+    width: min(490px, 100%); /*Define a largura da calculadora como o menor valor entre 490px e 100% da largura disponível, garantindo que ela se ajuste a diferentes tamanhos de tela*/
+    box-sizing: border-box; /*Define o modelo de caixa para incluir padding e border no tamanho total do elemento, evitando que o conteúdo transborde*/
 }
 
-#display { <!--Define o estilo do elemento com o ID "display", que é o visor da calculadora-->
-    display: flex; <!--Ativa Flexbox para organizar os elementos dentro do visor da calculadora-->
+#display { /*Define o estilo do elemento com o ID "display", que é o visor da calculadora*/
+    display: flex; /*Ativa Flexbox para organizar os elementos dentro do visor da calculadora*/
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    height: 90px; <!--Define a altura do visor da calculadora como 90px, garantindo espaço suficiente para exibir os números e operações-->
-    font-size: 2.2rem; <!--Define o tamanho da fonte do visor da calculadora como 2.2rem, tornando os números e operações grandes e legíveis-->
-    font-weight: 600; <!--Define o peso da fonte do visor da calculadora como 600, tornando os números e operações mais visíveis-->
-    text-align: right; <!--Alinha o texto do visor da calculadora à direita, para que os números e operações apareçam alinhados à direita do visor-->
-    margin-bottom: 20px; <!--Adiciona uma margem inferior de 20px ao visor da calculadora, criando espaço entre o visor e os botões abaixo-->
-    border: 2px solid rgba(140, 120, 255, 0.15); <!--Define uma borda de 2px ao redor do visor da calculadora com uma cor roxa clara e semi-transparente, destacando o visor visualmente-->
+    height: 90px; /*Define a altura do visor da calculadora como 90px, garantindo espaço suficiente para exibir os números e operações*/
+    font-size: 2.2rem; /*Define o tamanho da fonte do visor da calculadora como 2.2rem, tornando os números e operações grandes e legíveis*/
+    font-weight: 600; /*Define o peso da fonte do visor da calculadora como 600, tornando os números e operações mais visíveis*/
+    text-align: right; /*Alinha o texto do visor da calculadora à direita, para que os números e operações apareçam alinhados à direita do visor*/
+    margin-bottom: 20px; /*Adiciona uma margem inferior de 20px ao visor da calculadora, criando espaço entre o visor e os botões abaixo*/
+    border: 2px solid rgba(140, 120, 255, 0.15); /*Define uma borda de 2px ao redor do visor da calculadora com uma cor roxa clara e semi-transparente, destacando o visor visualmente*/
     border-radius: 15px;
     padding-right: 20px;
     box-sizing: border-box;
-    background: #EEF0FF; <!--Define a cor de fundo do visor da calculadora como um branco azulado claro, criando um contraste suave com o texto e a borda-->
-    color: #2D3559; <!--Define a cor do texto do visor da calculadora como um azul escuro, garantindo boa legibilidade contra o fundo claro-->
-    outline: none; <!--Remove o contorno padrão do navegador quando o visor da calculadora está focado, criando uma aparência mais limpa e personalizada-->
+    background: #EEF0FF; /*Define a cor de fundo do visor da calculadora como um branco azulado claro, criando um contraste suave com o texto e a borda*/
+    color: #2D3559; /*Define a cor do texto do visor da calculadora como um azul escuro, garantindo boa legibilidade contra o fundo claro*/
+    outline: none; /*Remove o contorno padrão do navegador quando o visor da calculadora está focado, criando uma aparência mais limpa e personalizada*/
     box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.buttons { <!--Define a classe "buttons" que estiliza o contêiner dos botões da calculadora-->
-    display: grid; <!--Ativa CSS Grid para organizar os botões da calculadora em uma grade-->
-    grid-template-columns: repeat(4, 1fr); <!--Define a grade para ter 4 colunas de largura igual, permitindo que os botões sejam distribuídos uniformemente-->
-    gap: 12px; <!--Adiciona um espaço de 12px entre os botões da calculadora, criando uma separação visual clara entre eles-->
+.buttons { /*Define a classe "buttons" que estiliza o contêiner dos botões da calculadora*/
+    display: grid; /*Ativa CSS Grid para organizar os botões da calculadora em uma grade*/
+    grid-template-columns: repeat(4, 1fr); /*Define a grade para ter 4 colunas de largura igual, permitindo que os botões sejam distribuídos uniformemente*/
+    gap: 12px; /*Adiciona um espaço de 12px entre os botões da calculadora, criando uma separação visual clara entre eles*/
 }
 
-button { <!--Define o estilo para os elementos de botão dentro da calculadora-->
+button { /*Define o estilo para os elementos de botão dentro da calculadora*/
     height: 65px;
     font-size: 1.3rem;
     font-weight: 600;
     border: none;
     border-radius: 15px;
-    cursor: pointer; <!--Define o cursor como pointer quando o mouse estiver sobre os botões, indicando que eles são clicáveis-->
-    background-color: #E8EAF2; <!--Define a cor de fundo dos botões da calculadora como um cinza claro, criando um contraste suave com o texto e o fundo do visor-->
-    color: #4a5568; <!--Define a cor do texto dos botões da calculadora como um cinza escuro, garantindo boa legibilidade contra o fundo claro dos botões-->
+    cursor: pointer; /*Define o cursor como pointer quando o mouse estiver sobre os botões, indicando que eles são clicáveis*/
+    background-color: #E8EAF2; /*Define a cor de fundo dos botões da calculadora como um cinza claro, criando um contraste suave com o texto e o fundo do visor*/
+    color: #4a5568; /*Define a cor do texto dos botões da calculadora como um cinza escuro, garantindo boa legibilidade contra o fundo claro dos botões*/
     box-shadow: 0 5px 12px rgba(29, 20, 102, 0.18);
-    transition: all 0.2s ease; <!--Adiciona uma transição suave de 0.2 segundos para todas as propriedades do botão, criando um efeito visual agradável quando o usuário interage com os botões-->
-    touch-action: manipulation; <!--Melhora a resposta ao toque em dispositivos móveis, garantindo que os botões respondam rapidamente ao toque sem atrasos causados por gestos de rolagem ou zoom-->
+    transition: all 0.2s ease; /*Adiciona uma transição suave de 0.2 segundos para todas as propriedades do botão, criando um efeito visual agradável quando o usuário interage com os botões*/
+    touch-action: manipulation; /*Melhora a resposta ao toque em dispositivos móveis, garantindo que os botões respondam rapidamente ao toque sem atrasos causados por gestos de rolagem ou zoom*/
 }
 
-button:hover { <!--Define o estilo para os botões da calculadora quando o mouse estiver sobre eles-->
-    background-color: #D9DDF0; <!--Altera a cor de fundo dos botões para um cinza um pouco mais escuro quando o mouse estiver sobre eles, criando um efeito de destaque visual-->
-    transform: translateY(-3px); <!--Move os botões para cima em 3px quando o mouse estiver sobre eles, criando um efeito de elevação visual que indica que o botão está ativo-->
+button:hover { /*Define o estilo para os botões da calculadora quando o mouse estiver sobre eles*/
+    background-color: #D9DDF0; /*Altera a cor de fundo dos botões para um cinza um pouco mais escuro quando o mouse estiver sobre eles, criando um efeito de destaque visual*/
+    transform: translateY(-3px); /*Move os botões para cima em 3px quando o mouse estiver sobre eles, criando um efeito de elevação visual que indica que o botão está ativo*/
 }
 
-button:active { <!--Define o estilo para os botões da calculadora quando eles estiverem sendo clicados-->
-    transform: scale(0.95); <!--Reduz o tamanho dos botões para 95% do original quando eles estiverem sendo clicados, criando um efeito de pressão visual que indica que o botão está sendo ativado-->
+button:active { /*Define o estilo para os botões da calculadora quando eles estiverem sendo clicados*/
+    transform: scale(0.95); /*Reduz o tamanho dos botões para 95% do original quando eles estiverem sendo clicados, criando um efeito de pressão visual que indica que o botão está sendo ativado*/
 }
 
-.operator { <!--Define a classe "operator" para estilizar os botões de operadores matemáticos da calculadora-->
-    background-color: #7A6CCF; <!--Define a cor de fundo dos botões de operadores matemáticos como um roxo médio, criando um contraste visual com os botões numéricos e destacando-os como elementos de ação importantes na calculadora-->
-    color: white; <!--Define a cor do texto dos botões de operadores matemáticos como branco, garantindo boa legibilidade contra o fundo roxo escuro dos botões-->
+.operator { /*Define a classe "operator" para estilizar os botões de operadores matemáticos da calculadora*/
+    background-color: #7A6CCF; /*Define a cor de fundo dos botões de operadores matemáticos como um roxo médio, criando um contraste visual com os botões numéricos e destacando-os como elementos de ação importantes na calculadora*/
+    color: white; /*Define a cor do texto dos botões de operadores matemáticos como branco, garantindo boa legibilidade contra o fundo roxo escuro dos botões*/
 }
 
-.operator:hover { <!--Define o estilo para os botões de operadores matemáticos quando o mouse estiver sobre eles-->
-    background-color: #8D7BE0; <!--Altera a cor de fundo dos botões de operadores matemáticos para um roxo um pouco mais claro quando o mouse estiver sobre eles, criando um efeito de destaque visual que indica que o botão está ativo-->
+.operator:hover { /*Define o estilo para os botões de operadores matemáticos quando o mouse estiver sobre eles*/
+    background-color: #8D7BE0; /*Altera a cor de fundo dos botões de operadores matemáticos para um roxo um pouco mais claro quando o mouse estiver sobre eles, criando um efeito de destaque visual que indica que o botão está ativo*/
 }
 
-.clear { <!--Define a classe "clear" para estilizar o botão de limpar da calculadora-->
-    background-color: #1D1466; <!--Define a cor de fundo do botão de limpar como um azul escuro, criando um contraste visual forte com os outros botões e destacando-o como um elemento de ação importante na calculadora-->
-    color: #FFFFFF; <!--Define a cor do texto do botão de limpar como branco, garantindo boa legibilidade contra o fundo azul escuro do botão-->
+.clear { /*Define a classe "clear" para estilizar o botão de limpar da calculadora*/
+    background-color: #1D1466; /*Define a cor de fundo do botão de limpar como um azul escuro, criando um contraste visual forte com os outros botões e destacando-o como um elemento de ação importante na calculadora*/
+    color: #FFFFFF; /*Define a cor do texto do botão de limpar como branco, garantindo boa legibilidade contra o fundo azul escuro do botão*/
 }
 
-.clear:hover { <1!--Define o estilo para o botão de limpar quando o mouse estiver sobre ele-->
-    background-color: #2B1F8A; <1!--Altera a cor de fundo do botão de limpar para um azul um pouco mais claro quando o mouse estiver sobre ele, criando um efeito de destaque visual que indica que o botão está ativo-->
+.clear:hover { /*Define o estilo para o botão de limpar quando o mouse estiver sobre ele*/
+    background-color: #2B1F8A; /*Altera a cor de fundo do botão de limpar para um azul um pouco mais claro quando o mouse estiver sobre ele, criando um efeito de destaque visual que indica que o botão está ativo*/
 }
 
-.equal { <!--Define a classe "equal" para estilizar o botão de igual da calculadora-->
-    grid-column: span 2; <!--Faz com que o botão de igual ocupe duas colunas na grade, tornando-o visualmente mais proeminente e fácil de identificar como o botão de ação principal para calcular o resultado-->
-    background: linear-gradient( <!-Define um gradiente linear para o fundo do botão de igual, criando um efeito visual atraente que destaca o botão como um elemento de ação importante na calculadora-->
+.equal { /*Define a classe "equal" para estilizar o botão de igual da calculadora*/
+    grid-column: span 2; /*Faz com que o botão de igual ocupe duas colunas na grade, tornando-o visualmente mais proeminente e fácil de identificar como o botão de ação principal para calcular o resultado*/
+    background: linear-gradient( /*Define um gradiente linear para o fundo do botão de igual, criando um efeito visual atraente que destaca o botão como um elemento de ação importante na calculadora*/
         135deg,
-        #F26DB2 0%, <!--Define a cor inicial do gradiente como um rosa vibrante, criando um contraste visual forte com os outros botões e destacando o botão de igual como um elemento de ação importante na calculadora-->
-        #8D6BFF 100% <!--Define a cor final do gradiente como um roxo vibrante, criando um efeito de transição suave e visualmente atraente que destaca o botão de igual como um elemento de ação importante na calculadora-->
+        #F26DB2 0%, /*Define a cor inicial do gradiente como um rosa vibrante, criando um contraste visual forte com os outros botões e destacando o botão de igual como um elemento de ação importante na calculadora*/
+        #8D6BFF 100% /*Define a cor final do gradiente como um roxo vibrante, criando um efeito de transição suave e visualmente atraente que destaca o botão de igual como um elemento de ação importante na calculadora*/
     );
     color: white; 
     box-shadow: 0 4px 12px rgba(242, 109, 178, 0.35);
 }
 
-.equal:hover { <!--Define o estilo para o botão de igual quando o mouse estiver sobre ele-->
+.equal:hover { /*Define o estilo para o botão de igual quando o mouse estiver sobre ele*/
     background: linear-gradient(
         135deg,
-        #FFB2D5, <!--Altera a cor inicial do gradiente para um rosa mais claro quando o mouse estiver sobre o botão de igual, criando um efeito de destaque visual que indica que o botão está ativo-->
-        #D9A6F5 <!--Altera a cor final do gradiente para um roxo mais claro quando o mouse estiver sobre o botão de igual, criando um efeito de destaque visual que indica que o botão está ativo-->
+        #FFB2D5, /*Altera a cor inicial do gradiente para um rosa mais claro quando o mouse estiver sobre o botão de igual, criando um efeito de destaque visual que indica que o botão está ativo*/
+        #D9A6F5 /*Altera a cor final do gradiente para um roxo mais claro quando o mouse estiver sobre o botão de igual, criando um efeito de destaque visual que indica que o botão está ativo*/
     );
 }
 
-.delete { <!--Define a classe "delete" para estilizar o botão de apagar da calculadora-->
-    background-color: #F28BC6; <!--Define a cor de fundo do botão de apagar como um rosa claro, criando um contraste visual com os outros botões e destacando-o como um elemento de ação importante na calculadora-->
-    color: white; <!--Define a cor do texto do botão de apagar como branco, garantindo boa legibilidade contra o fundo rosa claro do botão-->
+.delete { /*Define a classe "delete" para estilizar o botão de apagar da calculadora*/
+    background-color: #F28BC6; /*Define a cor de fundo do botão de apagar como um rosa claro, criando um contraste visual com os outros botões e destacando-o como um elemento de ação importante na calculadora*/
+    color: white; /*Define a cor do texto do botão de apagar como branco, garantindo boa legibilidade contra o fundo rosa claro do botão*/
 }
 
-.delete:hover { <!--Define o estilo para o botão de apagar quando o mouse estiver sobre ele-->
+.delete:hover { /*Define o estilo para o botão de apagar quando o mouse estiver sobre ele*/
     background: linear-gradient( 
         135deg,
-        #FFB2D5, <!--Altera a cor inicial do gradiente para um rosa mais claro quando o mouse estiver sobre o botão de apagar, criando um efeito de destaque visual que indica que o botão está ativo-->
-        #D9A6F5 <!--Altera a cor final do gradiente para um roxo mais claro quando o mouse estiver sobre o botão de apagar, criando um efeito de destaque visual que indica que o botão está ativo-->
+        #FFB2D5, /*Altera a cor inicial do gradiente para um rosa mais claro quando o mouse estiver sobre o botão de apagar, criando um efeito de destaque visual que indica que o botão está ativo*/
+        #D9A6F5 /*Altera a cor final do gradiente para um roxo mais claro quando o mouse estiver sobre o botão de apagar, criando um efeito de destaque visual que indica que o botão está ativo*/
     );
 }
 
-@media (max-width: 600px) { <!--Define uma consulta de mídia para aplicar estilos específicos quando a largura da tela for de no máximo 600px, garantindo que a calculadora seja responsiva e se ajuste a dispositivos menores como smartphones-->
-    .calculator { <!--Define estilos específicos para o contêiner da calculadora quando a largura da tela for de no máximo 600px, garantindo que a calculadora seja responsiva e se ajuste a dispositivos menores como smartphones-->
+@media (max-width: 600px) { /*Define uma consulta de mídia para aplicar estilos específicos quando a largura da tela for de no máximo 600px, garantindo que a calculadora seja responsiva e se ajuste a dispositivos menores como smartphones*/
+    .calculator { /*Define estilos específicos para o contêiner da calculadora quando a largura da tela for de no máximo 600px, garantindo que a calculadora seja responsiva e se ajuste a dispositivos menores como smartphones*/
         padding: 16px;
         border-radius: 20px;
     }
 
-    #display { <!--Define estilos específicos para o visor da calculadora quando a largura da tela for de no máximo 600px, garantindo que o visor seja responsivo e se ajuste a dispositivos menores como smartphones-->
+    #display { /*Define estilos específicos para o visor da calculadora quando a largura da tela for de no máximo 600px, garantindo que o visor seja responsivo e se ajuste a dispositivos menores como smartphones*/
         height: 76px;
         margin-bottom: 16px;
         padding-right: 16px;
@@ -148,42 +148,42 @@ button:active { <!--Define o estilo para os botões da calculadora quando eles e
         border-radius: 13px;
     }
 
-    .buttons { <!--Define estilos específicos para o contêiner dos botões da calculadora quando a largura da tela for de no máximo 600px, garantindo que os botões sejam responsivos e se ajustem a dispositivos menores como smartphones-->
-        gap: 10px; <!--Reduz o espaço entre os botões para 10px, criando uma separação visual adequada para dispositivos menores como smartphones-->
+    .buttons { /*Define estilos específicos para o contêiner dos botões da calculadora quando a largura da tela for de no máximo 600px, garantindo que os botões sejam responsivos e se ajustem a dispositivos menores como smartphones*/
+        gap: 10px; /*Reduz o espaço entre os botões para 10px, criando uma separação visual adequada para dispositivos menores como smartphones*/
     }
 
-    button { <!--Define estilos específicos para os botões da calculadora quando a largura da tela for de no máximo 600px, garantindo que os botões sejam responsivos e se ajustem a dispositivos menores como smartphones-->
-        height: clamp(54px, 14vw, 62px); <!--Define a altura dos botões usando a função clamp(), que ajusta a altura entre um valor mínimo de 54px, um valor ideal baseado na largura da tela (14vw), e um valor máximo de 62px, garantindo que os botões sejam responsivos e se ajustem a diferentes tamanhos de tela em dispositivos menores como smartphones-->
+    button { /*Define estilos específicos para os botões da calculadora quando a largura da tela for de no máximo 600px, garantindo que os botões sejam responsivos e se ajustem a dispositivos menores como smartphones*/
+        height: clamp(54px, 14vw, 62px); /*Define a altura dos botões usando a função clamp(), que ajusta a altura entre um valor mínimo de 54px, um valor ideal baseado na largura da tela (14vw), e um valor máximo de 62px, garantindo que os botões sejam responsivos e se ajustem a diferentes tamanhos de tela em dispositivos menores como smartphones*/
         font-size: 1.15rem;
         border-radius: 13px;
     }
 }
 
-@media (max-width: 360px), (max-height: 650px) { <!--Define uma consulta de mídia para aplicar estilos específicos quando a largura da tela for de no máximo 360px ou a altura da tela for de no máximo 650px, garantindo que a calculadora seja responsiva e se ajuste a dispositivos muito pequenos como smartphones compactos ou em modo retrato-->
-    body { <!--Define estilos específicos para o corpo da página quando a largura da tela for de no máximo 360px ou a altura da tela for de no máximo 650px, garantindo que a calculadora seja responsiva e se ajuste a dispositivos muito pequenos como smartphones compactos ou em modo retrato-->
-        padding: <!-Reduz o preenchimento ao redor do conteúdo para evitar que ele fique muito próximo das bordas da tela em dispositivos muito pequenos como smartphones compactos ou em modo retrato, usando a função max() para garantir um preenchimento mínimo de 10px ou o valor do recorte seguro do dispositivo, o que for maior-->
+@media (max-width: 360px), (max-height: 650px) { /*Define uma consulta de mídia para aplicar estilos específicos quando a largura da tela for de no máximo 360px ou a altura da tela for de no máximo 650px, garantindo que a calculadora seja responsiva e se ajuste a dispositivos muito pequenos como smartphones compactos ou em modo retrato*/
+    body { /*Define estilos específicos para o corpo da página quando a largura da tela for de no máximo 360px ou a altura da tela for de no máximo 650px, garantindo que a calculadora seja responsiva e se ajuste a dispositivos muito pequenos como smartphones compactos ou em modo retrato*/
+        padding: /*Reduz o preenchimento ao redor do conteúdo para evitar que ele fique muito próximo das bordas da tela em dispositivos muito pequenos como smartphones compactos ou em modo retrato, usando a função max() para garantir um preenchimento mínimo de 10px ou o valor do recorte seguro do dispositivo, o que for maior*/
             max(10px, env(safe-area-inset-top))
             max(10px, env(safe-area-inset-right))
             max(10px, env(safe-area-inset-bottom))
             max(10px, env(safe-area-inset-left));
     }
 
-    .calculator { <!--Define estilos específicos para o contêiner da calculadora quando a largura da tela for de no máximo 360px ou a altura da tela for de no máximo 650px, garantindo que a calculadora seja responsiva e se ajuste a dispositivos muito pequenos como smartphones compactos ou em modo retrato-->
+    .calculator { /*Define estilos específicos para o contêiner da calculadora quando a largura da tela for de no máximo 360px ou a altura da tela for de no máximo 650px, garantindo que a calculadora seja responsiva e se ajuste a dispositivos muito pequenos como smartphones compactos ou em modo retrato*/
         padding: 12px;
         border-radius: 18px;
     }
 
-    #display { <!--Define estilos específicos para o visor da calculadora quando a largura da tela for de no máximo 360px ou a altura da tela for de no máximo 650px, garantindo que o visor seja responsivo e se ajuste a dispositivos muito pequenos como smartphones compactos ou em modo retrato-->
+    #display { /*Define estilos específicos para o visor da calculadora quando a largura da tela for de no máximo 360px ou a altura da tela for de no máximo 650px, garantindo que o visor seja responsivo e se ajuste a dispositivos muito pequenos como smartphones compactos ou em modo retrato*/
         height: 64px;
         margin-bottom: 12px;
         font-size: 1.65rem;
     }
 
-    .buttons { <!--Define estilos específicos para o contêiner dos botões da calculadora quando a largura da tela for de no máximo 360px ou a altura da tela for de no máximo 650px, garantindo que os botões sejam responsivos e se ajustem a dispositivos muito pequenos como smartphones compactos ou em modo retrato-->
+    .buttons { /*Define estilos específicos para o contêiner dos botões da calculadora quando a largura da tela for de no máximo 360px ou a altura da tela for de no máximo 650px, garantindo que os botões sejam responsivos e se ajustem a dispositivos muito pequenos como smartphones compactos ou em modo retrato*/
         gap: 8px;
     }
 
-    button { <!--Define estilos específicos para os botões da calculadora quando a largura da tela for de no máximo 360px ou a altura da tela for de no máximo 650px, garantindo que os botões sejam responsivos e se ajustem a dispositivos muito pequenos como smartphones compactos ou em modo retrato-->
+    button { /*Define estilos específicos para os botões da calculadora quando a largura da tela for de no máximo 360px ou a altura da tela for de no máximo 650px, garantindo que os botões sejam responsivos e se ajustem a dispositivos muito pequenos como smartphones compactos ou em modo retrato*/
         height: 50px;
         font-size: 1.05rem;
         border-radius: 11px;
