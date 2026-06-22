@@ -1,26 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Calculadora Simples</title>
-</head>
-<body>
-    <div class="calculator">
-        <input type="text" id="display" readonly placeholder="0">
-        <div class="buttons">
+<!DOCTYPE html> <!--Define HTML5-->
+<html lang="pt-br"> <!--Inicia o documento em português-->
+<head> <!--Área de configurações-->
+    <meta charset="UTF-8"> <!--Permite acentos e caracteres especiais-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Adapta para celulares-->
+    <link rel="stylesheet" href="style.css"> <!--Liga o CSS ao HTML-->
+    <title>Calculadora Simples</title> <!--Nome da aba do navegador-->
+</head> <!--Fecha as configurações-->
+<body> <!--Área visível da página-->
+    <div class="calculator"> <!--Caixa principal da calculadora-->
+        <input type="text" id="display" readonly placeholder="0"> <!--Visor da calculadora. O readonly usuário só pode usar os botões da calculadora.-->
+        <div class="buttons"> <!--Agrupa os botões-->
             <!-- Primeira linha -->
-            <button class="clear" onclick="clearDisplay()">AC</button>
-            <button class="delete" onclick="deleteLast()">⌫</button>
-            <button class="operator" onclick="calculatePercentage()">%</button>
-            <button class="operator" onclick="appendToDisplay('/')">÷</button>
+            <button class="clear" onclick="clearDisplay()">AC</button> <!--Limpa tudo-->
+            <button class="delete" onclick="deleteLast()">⌫</button> <!--Apaga o último caractere-->
+            <button class="operator" onclick="calculatePercentage()">%</button> <!--Calcula porcentagem-->
+            <button class="operator" onclick="appendToDisplay('/')">÷</button> <!--Adiciona o operador de divisão-->
 
             <!-- Segunda linha -->
-            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('7')">7</button> <!--button cria um botão e onclick define a ação quando clicado. O appendToDisplay adiciona valores ao visor-->
             <button onclick="appendToDisplay('8')">8</button>
             <button onclick="appendToDisplay('9')">9</button>
-            <button class="operator" onclick="appendToDisplay('*')">×</button>
+            <button class="operator" onclick="appendToDisplay('*')">×</button> <!--O símbolo visual × é convertido para *, que é o operador de multiplicação usado pelo JavaScript-->
 
             <!-- Terceira linha -->
             <button onclick="appendToDisplay('4')">4</button>
@@ -35,11 +35,11 @@
             <button class="operator" onclick="appendToDisplay('+')">+</button>
             
             <!-- Quinta linha -->
-            <button class="double" onclick="appendToDisplay('0')">0</button>
+            <button class="double" onclick="appendToDisplay('0')">0</button><!!--Adiciona zero ao visor e class="double" faz o botão ocupar duas colunas
             <button onclick="appendToDisplay(',')">,</button>
-            <button class="equal" onclick="calculate()">=</button>
+            <button class="equal" onclick="calculate()">=</button> <!--calculate() Processa a expressão matemática e mostra o resultado-->
         </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+    </div> <!--Termina a “caixa” principal da calculadora-->
+    <script src="script.js"></script> <!--Conecta o arquivo JavaScript ao HTML.-->
+</body> <!--Fecha o corpo da página, onde ficam os elementos visíveis-->
+</html> <!--Fecha o documento HTML inteiro-->
